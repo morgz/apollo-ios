@@ -141,7 +141,7 @@ If you're using the template code and following the sample project structure, th
 MyProject // SourceRoot
   | MyProject.xcodeproj
   | - MyProject // Contains app target source files
-       | schema.json // <-- downloaded schema
+       | schema.graphqls // <-- downloaded schema
   | - MyLibraryTarget // Contains lib target source files
   | - MyProjectTests // Contains test files
   | - ApolloCodegen // Contains Swift Scripting files
@@ -153,13 +153,13 @@ Next, now that you have a schema, you need a GraphQL file with an operation in o
 
 If you're not familiar with creating an operation in graphQL, please check out the [portion of our tutorial on executing your first query](https://www.apollographql.com/docs/ios/tutorial/tutorial-execute-query/). You can stop after the section about adding your query to Xcode.
 
-Make sure you've added the operation file to the project files, ideally at or above the level of the `schema.json` (Otherwise, you'll need to manually pass the URL of your GraphQL files to your code generation step):
+Make sure you've added the operation file to the project files, ideally at or above the level of the `schema.graphqls` (Otherwise, you'll need to manually pass the URL of your GraphQL files to your code generation step):
 
 ```txt:title=Sample%20Project%20Structure
 MyProject // SourceRoot
   | MyProject.xcodeproj
   | - MyProject // Contains app target source files
-       | schema.json
+       | schema.graphqls
        | LaunchList.graphql
   | - MyLibraryTarget // Contains lib target source files
   | - MyProjectTests // Contains test files
